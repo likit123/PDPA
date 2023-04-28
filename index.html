@@ -282,7 +282,7 @@
               do_pdpa_bank_de()
               pdpa_start = false;
               if (pdpa_use_time == 1) {
-                pdpa_eye_view.disabled = true
+                pdpa_eye_view[i].disabled = true
                 setTimeout(() => {
                   do_pdpa_accountnum_en()
                   do_pdpa_name_en()
@@ -291,7 +291,7 @@
                   do_pdpa_credit_debit_en()
                   do_pdpa_pop_en()
                   do_pdpa_bank_en()
-                  pdpa_eye_view.disabled = false
+                  pdpa_eye_view[i].disabled = false
                 }, pdpa_use_time_unit);
                 pdpa_start = true;
               }
