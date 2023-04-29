@@ -215,16 +215,18 @@ window.onload = function (e) {
           pdpa_start = false;
 
           //begin save to log
-          application = 'แก้ไขได้ ป้อนชื่อ application'
-          try {
-            let fd = new FormData();
-            fd.append("application", application)
-            fetch('pdpa_log.php', {
-              method: 'POST',
-              body: fd,
-            })
-          } catch (error) {
-            console.log('have error', error);
+          if (i == 0) {
+            application = 'แก้ไขได้ ป้อนชื่อ application'
+            try {
+              let fd = new FormData();
+              fd.append("application", application)
+              fetch('pdpa_log.php', {
+                method: 'POST',
+                body: fd,
+              })
+            } catch (error) {
+              console.log('have error', error);
+            }
           }
           //end save to log
 
