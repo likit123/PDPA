@@ -71,7 +71,8 @@ window.onload = function (e) {
     }
 
     function pdpa_name_en(a) {
-      a.replace(/\s{3}/g, " ").replace(/\s{2}/g, " ")
+      a = a.replace(/\s{3}/g, " ")
+      a = a.replace(/\s{2}/g, " ")
       b = a.split(" ");
       if (b.length == 3) {
         fname = b[1];
