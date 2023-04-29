@@ -9,5 +9,5 @@
   - pdpa_log.js
   - pdpa_log.php 
   - pdpa_config.php (เชื่อมต่อฐานข้อมูล)
-  - pdpa_log.sql (ใช้สร้างเทเบิล)
+  - pdpa_log.sql (ใช้สร้างเทเบิล) 
    
