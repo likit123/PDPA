@@ -1,6 +1,6 @@
 /*
   ==============================
-  PDPA Library version 0.4
+  PDPA Library version 0.5
   ==============================
   
   คุณสมบัติของ PDPA Library
@@ -18,7 +18,7 @@
 */
 
 
-window.onload = function (e) {
+window.addEventListener("DOMContentLoaded", function () {
 
   function pdpa_begin() {
 
@@ -270,4 +270,4 @@ window.onload = function (e) {
 
   pdpa_begin();
 
-}
+});
