@@ -1,6 +1,6 @@
 /*
   ==============================
-  PDPA Library version 0.3
+  PDPA Library version 0.4
   ==============================
   
   คุณสมบัติของ PDPA Library
@@ -73,6 +73,7 @@ window.onload = function (e) {
     function pdpa_name_en(a) {
       a = a.replace(/\s{3}/g, " ")
       a = a.replace(/\s{2}/g, " ")
+      a = a.trim()
       b = a.split(" ");
       if (b.length == 3) {
         fname = b[1];
