@@ -93,7 +93,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     let pdpa_x = document.querySelectorAll(".pdpa");
-    var pdpa_y = [];
+    let pdpa_y = [];
 
     function do_pdpa() {
       for (i = 0; i < pdpa_x.length; i++) {
