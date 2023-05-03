@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", function () {
             if (j != k) {
 
               //begin save to log
-              if (k == 0) {
+              if (k == 1) {
                 application = 'แก้ไขได้ ป้อนชื่อ application'
                 try {
                   let fd = new FormData();
