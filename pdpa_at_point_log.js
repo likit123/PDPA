@@ -128,7 +128,7 @@ window.addEventListener("DOMContentLoaded", function () {
           for (k = 0; k < pdpa_x.length; k++) {
             if (j != k) {
 
-              //begin save to log
+              //begin save to log 
               if (k == 1) {
                 application = 'แก้ไขได้ ป้อนชื่อ application'
                 try {
