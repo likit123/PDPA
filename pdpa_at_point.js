@@ -1,6 +1,6 @@
 /*
   ==============================
-  PDPA Library version 0.6
+  PDPA Library version 0.7
   ==============================
   
   คุณสมบัติของ PDPA Library

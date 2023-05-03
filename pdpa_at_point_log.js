@@ -1,6 +1,6 @@
 /*
   ==============================
-  PDPA Library version 0.6.1
+  PDPA Library version 0.7
   ==============================
   
   คุณสมบัติของ PDPA Library
@@ -123,27 +123,12 @@ window.addEventListener("DOMContentLoaded", function () {
         pdpa_x[i].style.cursor = "pointer";
         pdpa_x[i].setAttribute("pdpa_value_old", pdpa_y[i]);
         pdpa_x[i].setAttribute("pdpa_i", i);
-        pdpa_x[i].addEventListener("click", function () {
+        pdpa_x[i].setAttribute("pdpa_can_logsave", 0);
+        pdpa_x[i].addEventListener("click", function (e) {
           pdpa_x[j].innerHTML = this.getAttribute('pdpa_value_old')
           for (k = 0; k < pdpa_x.length; k++) {
             if (j != k) {
-
-              //begin save to log 
-              if (k == 1) {
-                application = 'แก้ไขได้ ป้อนชื่อ application'
-                try {
-                  let fd = new FormData();
-                  fd.append("application", application)
-                  fetch('pdpa_log.php', {
-                    method: 'POST',
-                    body: fd,
-                  })
-                } catch (error) {
-                  console.log('have error', error);
-                }
-              }
-              //end save to log
-
+              pdpa_x[k].setAttribute("pdpa_can_logsave", 0);
               if (pdpa_x[k].classList.contains("pdpa_accountnum")) {
                 pdpa_y[k] = pdpa_accountnum_de(pdpa_x[k].innerHTML);
                 pdpa_x[k].innerHTML = pdpa_accountnum_en(pdpa_x[k].innerHTML);
@@ -166,6 +151,21 @@ window.addEventListener("DOMContentLoaded", function () {
                 pdpa_y[k] = pdpa_bank_de(pdpa_x[k].innerHTML);
                 pdpa_x[k].innerHTML = pdpa_bank_en(pdpa_x[k].innerHTML);
               }
+            } else {
+              if (pdpa_x[k].getAttribute('pdpa_can_logsave') == '0') {
+                application = 'แก้ไขได้ ป้อนชื่อ application'
+                try {
+                  let fd = new FormData();
+                  fd.append("application", application)
+                  fetch('pdpa_log.php', {
+                    method: 'POST',
+                    body: fd,
+                  })
+                } catch (error) {
+                  console.log('have error', error);
+                }
+              }
+              pdpa_x[k].setAttribute("pdpa_can_logsave", 1);
             }
           }
         })
