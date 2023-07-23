@@ -24,3 +24,5 @@
   - pdpa_log.sql (ใช้สร้างเทเบิล) 
 
 
+- pdpa_php_function.php
+  คำสั่งภาษา PHP สำหรับ เข้ารหัส และ ถอดรหัส PDPA
